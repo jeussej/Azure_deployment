@@ -2,6 +2,7 @@ from bottle import route, run
 
 @route("/cosas/<cosa>")
 def cosas(cosa):
-    return f"<h1>hola {cosa} </h>"
+    saludo = "Hola,"
+    return saludo + str(cosa)
 
 run(host='localhost', port=8080, debug=True)
